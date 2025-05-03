@@ -7,3 +7,15 @@ body {
 section {
     margin-bottom: 5rem;
 }
+
+.skills {
+    background-color: white;
+    color: black;
+    font-size: 1.125rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1.25rem;
+    border-radius: 1.5rem;
+    border: 1px solid #F44335;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}

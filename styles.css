@@ -90,3 +90,24 @@ section {
   html {
     transition: color 0.3s ease, background-color 0.3s ease;
   }
+
+  /* Responsive for medium and small devices */
+  @media (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .border-divider {
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        /* Horizontal line on smaller devices */
+        padding-bottom: 15px;
+    }
+
+    .container .border-divider:last-child {
+        border-bottom: none;
+        /* No border on the last item */
+    }
+}

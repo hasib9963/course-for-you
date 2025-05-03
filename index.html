@@ -4,7 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      plugins: [
+        function({ addVariant }) {
+          addVariant('children', '& > *')
+        }
+      ]
+    }
+  </script>
+    </head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
     <title>C4U</title>
@@ -382,143 +394,191 @@
     <!-- team work section start  -->
     <section class="relative h-screen flex items-center"> <!-- Full height and center content vertically -->
         <!-- Background Image Container -->
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/brooke-cagle-g1Kr4Ozfoac-unsplash 2.png'); z-index: -1;">
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('images/brooke-cagle-g1Kr4Ozfoac-unsplash 2.png'); z-index: -1;">
             <!-- Empty div used to set the background image with full coverage -->
         </div>
-        
+
         <!-- Content to overlay the background image -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg flex-1" style="margin-left: 50px; max-width: 600px;"> <!-- Left margin and max-width added -->
-            <div class="mb-4"> 
+        <div class="bg-white p-6 rounded-2xl shadow-lg flex-1" style="margin-left: 50px; max-width: 600px;">
+            <!-- Left margin and max-width added -->
+            <div class="mb-4">
                 <img src="images/quote.png" alt="">
-                <h1 class="text-2xl font-bold py-5">I worked in retail and needed to make a<br>change. The certificate is really<br>designed for you to go at your own<br>pace. This is something that anybody<br>can do</h1>
-                <p class="text-[#F9CCC7]">Daniel, IT Support Specialist at Central Community<br>College and Google IT Support Certificate graduate</p> 
+                <h1 class="text-2xl font-bold py-5">I worked in retail and needed to make a<br>change. The certificate
+                    is really<br>designed for you to go at your own<br>pace. This is something that anybody<br>can do
+                </h1>
+                <p class="text-[#F9CCC7]">Daniel, IT Support Specialist at Central Community<br>College and Google IT
+                    Support Certificate graduate</p>
             </div>
-        </div> 
+        </div>
     </section>
     <!-- team work section end  -->
 
     <!-- footer section start  -->
     <footer class="bg-white">
         <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-          <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <div>
-                <img src="images/logo.png" alt="">
-                <ul class="mt-6 space-y-4 text-sm">
-                    <li>
-                      <a href="#" class="text-gray-700 transition hover:opacity-75">Level39</a>
-                    </li>
-        
-                    <li>
-                      <a href="#" class="text-gray-700 transition hover:opacity-75">One Canada Square</a>
-                    </li>
-        
-                    <li>
-                      <a href="#" class="text-gray-700 transition hover:opacity-75">Canary Wharf</a>
-                    </li>
-        
-                    <li>
-                      <a href="#" class="text-gray-700 transition hover:opacity-75">London</a>
-                    </li>
-        
-                    <li>
-                      <a href="#" class="text-gray-700 transition hover:opacity-75">E145AB</a>
-                    </li>
-                  </ul>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                    <img src="images/logo.png" alt="">
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a href="#" class="text-gray-700 transition hover:opacity-75">Level39</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-700 transition hover:opacity-75">One Canada Square</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-700 transition hover:opacity-75">Canary Wharf</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-700 transition hover:opacity-75">London</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-gray-700 transition hover:opacity-75">E145AB</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+                    <div>
+                        <p class="font-medium text-gray-900">Home</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Collaborations</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Statistics</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">How It Works</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Testimonials</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-gray-900">About Us</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Who We Are</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Mission statement </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Our Vision </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">The Team</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-gray-900">Upskill</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">It Support</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Project Managment</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Data Analysts</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Ux Design</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-gray-900">Contact Us </p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Your message</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Email</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Phone number</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-gray-700 transition hover:opacity-75">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-      
-            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-              <div>
-                <p class="font-medium text-gray-900">Home</p>
-      
-                <ul class="mt-6 space-y-4 text-sm">
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Collaborations</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Statistics</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">How It Works</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Testimonials</a>
-                  </li>
-                </ul>
-              </div>
-      
-              <div>
-                <p class="font-medium text-gray-900">About Us</p>
-      
-                <ul class="mt-6 space-y-4 text-sm">
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Who We Are</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Mission statement </a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Our Vision </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">The  Team</a>
-                  </li>
-                </ul>
-              </div>
-      
-              <div>
-                <p class="font-medium text-gray-900">Upskill</p>
-      
-                <ul class="mt-6 space-y-4 text-sm">
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">It Support</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Project Managment</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Data Analysts</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Ux Design</a>
-                  </li>
-                </ul>
-              </div>
-      
-              <div>
-                <p class="font-medium text-gray-900">Contact Us </p>
-      
-                <ul class="mt-6 space-y-4 text-sm">
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Your message</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Email</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Phone number</a>
-                  </li>
-      
-                  <li>
-                    <a href="#" class="text-gray-700 transition hover:opacity-75">Linkedin</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-      
-          <p class="text-xs text-gray-500 text-center">&copy; Copyright 2024 Hasib Hasan</p>
+
+            <p class="text-xs text-gray-500 text-center">&copy; Copyright 2024 Hasib Hasan</p>
         </div>
-      </footer>
-      <!-- footer section end  -->
+    </footer>
+    <!-- footer section end  -->
+
+    <!-- javascript for dark mode and menu toggler for small devices -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const html = document.documentElement;
+          const hamburger = document.getElementById('hamburger');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const themeToggles = [document.getElementById('mobile-switch'), 
+                              document.getElementById('desktop-switch')];
+      
+          // Initialize theme
+          const initTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+              html.classList.add('dark');
+            }
+          };
+      
+          // Toggle mobile menu
+          hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+      
+          // Toggle dark mode
+          themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+              html.classList.toggle('dark');
+              localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            });
+          });
+      
+          // Watch for system theme changes
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+              html.classList.toggle('dark', e.matches);
+            }
+          });
+      
+          initTheme();
+        });
+      </script>
 </body>
 
 </html>

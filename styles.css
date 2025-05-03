@@ -58,3 +58,35 @@ section {
 .container .border-divider:last-child {
     border-right: none;
 }
+
+
+
+/* Base dark mode styles */
+:root {
+    --text-primary: #1f2937;
+    --bg-primary: #ffffff;
+  }
+  
+  .dark {
+    --text-primary: #f3f4f6;
+    --bg-primary: #1f2937;
+  }
+  
+  /* Force dark mode on all elements */
+  .dark, .dark children {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+  }
+  
+  /* Specific component fixes */
+  .dark .skills,
+  .dark .course,
+  .dark .course-1 {
+    border-color: #f3f4f6;
+    color: var(--text-primary);
+  }
+  
+  /* Ensure transitions work */
+  html {
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
